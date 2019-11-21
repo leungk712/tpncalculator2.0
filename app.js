@@ -25,6 +25,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
     const calculateGIR = (dexGram, weight, hours) => ((dexGram / weight) / hours).toFixed(2);
 
+    // TPN Function
+
     const tpn = () => {
       const weightInput = document.querySelector("#weight").value;
       const lbValue = parseInt(weightInput);
@@ -61,7 +63,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     const weightInput = document.querySelector("#weight").value;
     const lbValue = parseInt(weightInput);
-    
+
     document.querySelector("#calculate").addEventListener("click", () => {
       lbValue === '' || lbValue <= 0 ? alert('Please type in a weight in pounds') : tpn();
     });
